@@ -1,5 +1,8 @@
-from django.http import HttpResponse
+from datetime import datetime
+
+from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("<h1>Welcome to this sample page.</h1>")
+    date = datetime.today()
+    return render(request, "index.html", context={"username": "anonymous_user", "date": date})
