@@ -1,5 +1,6 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+
 
 # Create your views here.
 def index(request):
-    return HttpResponse("<h1>Introduction section of the website</h1>")
+    return render(request, "intro/index.html")

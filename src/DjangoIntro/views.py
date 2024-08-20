@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 def index(request):
     date = datetime.today()
-    return render(request, "index.html", context={"username": "anonymous_user", "date": date})
+    return render(request, "DjangoIntro/index.html", context={"username": "anonymous_user", "date": date})
